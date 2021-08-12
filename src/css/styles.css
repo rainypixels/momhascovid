@@ -1,0 +1,78 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* Styles */
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+    @apply font-lora;
+}
+
+h1 {
+    @apply pb-6;
+}
+
+a {
+    @apply transition ease-in-out duration-300;
+}
+a:link, a:visited {
+    @apply text-primary-dark;
+}
+a:hover, a:active {
+    @apply text-primary-dark underline; 
+}
+
+p {
+    padding-bottom: 1.6em;
+    line-height: 1.6em;
+}
+
+.thumbnail-deselected {
+    @apply transition filter duration-300 ease-in-out transform hover:scale-105 hover:drop-shadow-md rounded-sm drop-shadow-md;
+}
+
+.thumbnail-selected {
+    @apply transition filter duration-300 ease-in-out transform hover:scale-105;
+    @apply rounded-sm ring-4 ring-offset-2 ring-offset-primary-light ring-transparent;
+    @apply ring-primary-dark ring-opacity-50;
+}
+
+.introLink {
+    @apply bg-white bg-opacity-20 px-1.5 p-0.5 rounded-lg hover:no-underline hover:bg-opacity-30;
+    font-size: 90%;
+    font-weight: bolder;
+}
+
+.whatsapp {
+    margin-bottom: 1.3em;
+}
+
+.symptoms h3 {
+    @apply font-bold;
+}
+.symptoms ul {
+    margin-bottom: 1.5em;
+}
+
+.lined-list li {
+    @apply border-black border-opacity-20;
+    border-top-width: 1px;
+    padding-bottom: calc(0.75rem - 1px);
+    padding-top: calc(0.75rem - 1px);
+}
+
+.lined-list li:first-child {
+    @apply border-transparent;
+}
